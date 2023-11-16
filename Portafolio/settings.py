@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!i38vgs#!s3d2jcbbhn5$&d@@9r%+4hc-jlfxkk@8in$t5u!84
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'Portafolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '62g6E6*3-5GgE4AgbD1afGG2G5B4agDg',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '41420',
     }
 }
 
@@ -126,5 +130,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
