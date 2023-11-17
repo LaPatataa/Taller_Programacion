@@ -1,0 +1,9 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+  <form method="post" action="{% url 'generate_qr' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Generar QR">
+  </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+  {% if qr_image %}
+    <h2>Código QR generado</h2>
+    <img src="data:image/png;base64,{{ qr_image }}" alt="QR Code">
+    <p>URL: <a href="{{ url }}">{{ url }}</a></p>
+  {% endif %}
+{% endblock %}
