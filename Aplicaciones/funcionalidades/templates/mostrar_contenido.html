@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ... tu código actual ... -->
+</head>
+<body>
+    <h1>Contenido de mi archivo</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Cargar Archivo solo txt</button>
+    </form>
+
+    {% if contenido %}
+        <h2>Contenido del Archivo:</h2>
+        <p>{{ contenido }}</p>
+    {% endif %}
+</body>
+</html>
+{% endblock %}

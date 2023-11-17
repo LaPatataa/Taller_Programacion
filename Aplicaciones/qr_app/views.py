@@ -14,6 +14,7 @@ def generate_qr_code(url):
         error_correction=qrcode.constants.ERROR_CORRECT_L,
         box_size=10,
         border=4,
+        
     )
     qr.add_data(url)
     qr.make(fit=True)
